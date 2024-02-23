@@ -40,7 +40,7 @@ header {
 
 .row {
   white-space: pre-wrap;
-  height: auto;
+  min height: 80px;
   border-top: 1px solid rgb(53, 31, 31);
 }
 

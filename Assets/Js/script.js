@@ -46,9 +46,18 @@ $(document).ready(function() {
 }
 
 
+    // Function to save events to local storage
+    function saveEvent() {
+        var hour = $(this).siblings('.hour').text();
+        var event = $(this).siblings('.description').val();
+        localStorage.setItem(hour, event);
+    }
+
+
     // Call functions to initialize the page
     displayCurrentDay();
     generateTimeBlocks();
+
 
     // Event listener for save buttons
     $('.saveBtn').on('click', saveEvent);
