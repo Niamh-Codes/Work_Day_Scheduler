@@ -44,7 +44,16 @@ $(document).ready(function() {
         schedulerDiv.append(timeBlock);
     }
 }
-
+    // Function to load events from local storage
+    function loadEvents() {
+        $('.description').each(function() {
+            var hour = $(this).siblings('.hour').text();
+            var event = localStorage.getItem(hour);
+            if (event !== null) {
+                $(this).val(event);
+            }
+        });
+    }
 
     // Function to save events to local storage
     function saveEvent() {
@@ -53,11 +62,10 @@ $(document).ready(function() {
         localStorage.setItem(hour, event);
     }
 
-
     // Call functions to initialize the page
     displayCurrentDay();
     generateTimeBlocks();
-
+    loadEvents();
 
     // Event listener for save buttons
     $('.saveBtn').on('click', saveEvent);
