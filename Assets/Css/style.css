@@ -15,13 +15,20 @@ textarea {
 
 header {
   text-align: center;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 20px solid black;
   padding: 60px;
 }
 
+.dayTime{
+  align-items: center;
+
+}
 .description {
   white-space: pre-wrap;
 }
@@ -34,7 +41,7 @@ header {
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;
+  border-top: 1px solid rgb(53, 31, 31);
 }
 
 .hour {
