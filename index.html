@@ -30,11 +30,15 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <div class="dayTime">'DD/MM/YYYY'</div>
   </header>
-  <div>
-      <p id="currentDay" class="lead"></p>
-      <div class="container" id="scheduler"> <!-- Timeblocks go here -->
+  <div class="container" id="scheduler">
+    <!-- Timeblocks go here -->
+    <div class="row align-items-center">
+      <div class="hour col-md-1"></div>
+      <textarea class="description form-control col-md-9"></textarea>
+      <button class="saveBtn btn btn-primary col-md-2"><i class="fa fa-save"></i></button>
     </div>
-
+    
+  </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="./Assets/Js/script.js"></script>
